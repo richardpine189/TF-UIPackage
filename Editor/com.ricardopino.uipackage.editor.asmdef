@@ -1,0 +1,16 @@
+{
+    "name": "com.ricardopino.uipackage.editor",
+    "rootNamespace": "com.ricardopino.uipackage",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
