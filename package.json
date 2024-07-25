@@ -1,0 +1,18 @@
+{
+  "name": "com.ricardopino.uipackage",
+  "version": "0.1.0",
+  "description": "",
+  "displayName": "",
+  "unity": "2022.3",
+  "unityRelease": "16f1",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "licensesUrl": "",
+  "dependencies": {},
+  "author": {
+    "name": "Ricardo Unelen Pino",
+    "email": "ricardo.pino@live.com",
+    "url": "https://www.linkedin.com/in/ricardo-pino-a1b21133/"
+  },
+  "hideInEditor" : false
+}
