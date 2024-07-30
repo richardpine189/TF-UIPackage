@@ -1,7 +1,9 @@
 {
     "name": "com.ricardopino.uipackage.editor",
     "rootNamespace": "com.ricardopino.uipackage",
-    "references": [],
+    "references": [
+        "com.ricardopino.uipackage"
+    ],
     "includePlatforms": [
         "Editor"
     ],
