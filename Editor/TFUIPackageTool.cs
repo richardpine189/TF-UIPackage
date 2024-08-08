@@ -17,6 +17,18 @@ public class TFUIPackageTool : EditorWindow
         {
             AddSceneLoaderGameObject();
         }
+        if (GUILayout.Button("Add HUD Scene"))
+        {
+            //AddSceneLoaderGameObject();
+        }
+        if (GUILayout.Button("Add HUD Elements"))
+        {
+            //AddSceneLoaderGameObject();
+        }
+        if (GUILayout.Button("Create Architecture Connection"))
+        {
+            //AddSceneLoaderGameObject();
+        }
     }
 
     private void AddSceneLoaderGameObject()

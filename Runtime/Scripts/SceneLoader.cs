@@ -5,7 +5,7 @@ using UnityEditor;
 public class SceneLoader : MonoBehaviour
 {
     // Campo serializable para seleccionar la escena desde el Inspector
-    [SerializeField] private SceneAsset sceneAsset;
+    [SerializeField] private string SceneName;
 
     void Start()
     {
@@ -15,19 +15,19 @@ public class SceneLoader : MonoBehaviour
     // Método para cargar la escena aditiva
     public void LoadSceneAdditive()
     {
-        if (sceneAsset != null)
+        if (SceneName != null)
         {
-            string sceneName = sceneAsset.name;
+            
             
             // Verificar si la escena ya está cargada
-            if (!SceneManager.GetSceneByName(sceneName).isLoaded)
+            if (!SceneManager.GetSceneByName(SceneName).isLoaded)
             {
-                SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
-                Debug.Log("Escena " + sceneName + " cargada de manera aditiva.");
+                SceneManager.LoadScene(SceneName, LoadSceneMode.Additive);
+                Debug.Log("Escena " + SceneName + " cargada de manera aditiva.");
             }
             else
             {
-                Debug.LogWarning("La escena " + sceneName + " ya está cargada.");
+                Debug.LogWarning("La escena " + SceneName + " ya está cargada.");
             }
         }
         else
@@ -39,19 +39,19 @@ public class SceneLoader : MonoBehaviour
     // Método para descargar la escena aditiva
     public void UnloadSceneAdditive()
     {
-        if (sceneAsset != null)
+        if (SceneName != null)
         {
-            string sceneName = sceneAsset.name;
+            
 
             // Verificar si la escena está cargada
-            if (SceneManager.GetSceneByName(sceneName).isLoaded)
+            if (SceneManager.GetSceneByName(SceneName).isLoaded)
             {
-                SceneManager.UnloadSceneAsync(sceneName);
-                Debug.Log("Escena " + sceneName + " descargada.");
+                SceneManager.UnloadSceneAsync(SceneName);
+                Debug.Log("Escena " + SceneName + " descargada.");
             }
             else
             {
-                Debug.LogWarning("La escena " + sceneName + " no está cargada.");
+                Debug.LogWarning("La escena " + SceneName + " no está cargada.");
             }
         }
         else
