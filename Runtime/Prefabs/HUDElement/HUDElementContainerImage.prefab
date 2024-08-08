@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 340897616918225067}
   - component: {fileID: 5864699800569736145}
   m_Layer: 5
-  m_Name: HUDElementContainer
+  m_Name: HUDElementContainerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
