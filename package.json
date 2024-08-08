@@ -8,11 +8,15 @@
   "documentationUrl": "",
   "changelogUrl": "",
   "licensesUrl": "",
-  "dependencies": {},
+  
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.9"
+  },
   "author": {
     "name": "Ricardo Unelen Pino",
     "email": "ricardo.pino@live.com",
     "url": "https://www.linkedin.com/in/ricardo-pino-a1b21133/"
   },
+
   "hideInEditor" : false
 }
