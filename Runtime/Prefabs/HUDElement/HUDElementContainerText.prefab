@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 2905267768487732278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8973666, y: 1.8973666, z: 1.8973666}
+  m_LocalScale: {x: 1, y: 1, z: 1.8973666}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 942248638298384480}
@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1100.3816, y: 1000}
+  m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8990774913953121884
 CanvasRenderer:
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.82641506, g: 0.77184045, b: 0.77184045, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 300
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: UI Loaded
+  m_Text: Lorem Ipsum
 --- !u!1 &3549318306113522791
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 942248638298384480}
   - component: {fileID: 6021941160426067637}
   - component: {fileID: 8983612071273388425}
-  - component: {fileID: 2784790290211020828}
+  - component: {fileID: 5045060761245008807}
   m_Layer: 5
   m_Name: HUDElementContainerText
   m_TagString: Untagged
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &2784790290211020828
+--- !u!114 &5045060761245008807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3549318306113522791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5111da9bc68b73141af0b2d771433a37, type: 3}
+  m_Script: {fileID: 11500000, guid: b32f1a160e71e52478ae9357e2b354f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go: {fileID: 5164467267244845589, guid: 0839f587e6e82f44eafd9e3bbf61601d, type: 3}
+  lifeText: {fileID: 826292051669450144}

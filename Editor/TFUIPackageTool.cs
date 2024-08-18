@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TFUIPackageTool : EditorWindow
 {
-    [MenuItem("Tools/TF-UIPackageTool")]
+    [MenuItem("Tools/TF-UIPackageTool/Options")]
     public static void ShowWindow()
     {
         GetWindow<TFUIPackageTool>("TF-UIPackageTool");
