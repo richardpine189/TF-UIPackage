@@ -71,16 +71,16 @@ namespace com.ricardopino.uipackage
 
         private void CreateSenderClass()
         {
-            string filePath = Path.Combine(folderPath, className + "Sender.cs");
+            string filePath = Path.Combine(folderPath, className + "DataSender.cs");
 
             using (StreamWriter writer = new StreamWriter(filePath, false))
             {
                 writer.WriteLine("using UnityEngine;");
                 writer.WriteLine("using System;");
                 writer.WriteLine();
-                writer.WriteLine("public class " + className + "Sender : MonoBehaviour");
+                writer.WriteLine("public class " + className + "DataSender : MonoBehaviour");
                 writer.WriteLine("{");
-                writer.WriteLine("    public Action<" + selectedType + "> OnDataNotify;");
+                writer.WriteLine("    public static Action<" + selectedType + "> OnDataNotify;");
                 writer.WriteLine();
                 writer.WriteLine("    public void NotifyData(" + selectedType + " data)");
                 writer.WriteLine("    {");
@@ -124,11 +124,11 @@ namespace com.ricardopino.uipackage
                 writer.WriteLine("");
                 writer.WriteLine("    void Awake()");
                 writer.WriteLine("    {");
-                writer.WriteLine("          LifeDataSender.OnDataNotify += UpdateHUD;");
+                writer.WriteLine("          " +className + "DataSender.OnDataNotify += UpdateHUD;");
                 writer.WriteLine("    }");
                 writer.WriteLine("    private void OnDestroy()");
                 writer.WriteLine("    {");
-                writer.WriteLine("          LifeDataSender.OnDataNotify -= UpdateHUD;");
+                writer.WriteLine("          " +className + "DataSender.OnDataNotify -= UpdateHUD;");
                 writer.WriteLine("    }");
                 writer.WriteLine("    public void UpdateHUD(" + selectedType + " obj)");
                 writer.WriteLine("    {");
