@@ -5,21 +5,24 @@ using System.IO;
 namespace com.ricardopino.uipackage
 {
 
-    public class ClassCreatorTool : EditorWindow
+    public class ClassDualVariableCreatorTool : EditorWindow
     {
         private string className = "NewClass";
-        private string variableName = "Variable Name";
-        private string selectedType = "int";
-        private string selectedTemplateType = "Text";
+        private string variableNameNumeric = "Variable Name";
+        private string variableNameNoNumeric = "Variable Name";
+        private string selectedTypeNumeric = "int";
+        private string selectedTypeNoNumeric = "string";
+        private string selectedTemplateType = "ImageFiller";
         private string folderPath;
-        private string[] _scriptTemplateTypes = { "Text", "Image AddAndRemove"};
+        private string[] _scriptTemplateTypes = { "ImageFiller", "FaderUpAndDown"};
+        
+        private string[] variableTypesNumeric = { "int", "float"};
+        private string[] variableTypesNoNumeric = {"string"};
 
-        private string[] variableTypes = { "int", "float", "string" };
-
-        [MenuItem("Tools/TF-UIPackageTools/Create Class Single Variable")]
+        [MenuItem("Tools/TF-UIPackageTools/Create Class Dual Variable")]
         public static void ShowWindow()
         {
-            GetWindow<ClassCreatorTool>("Create Class Tool");
+            GetWindow<ClassDualVariableCreatorTool>("Create Class Tool");
         }
 
         private void OnGUI()
@@ -28,12 +31,19 @@ namespace com.ricardopino.uipackage
 
             className = EditorGUILayout.TextField("Class Name", className);
 
-            selectedType =
-                    variableTypes[
-                        EditorGUILayout.Popup("Variable Type", System.Array.IndexOf(variableTypes, selectedType),
-                            variableTypes)];
+            selectedTypeNumeric =
+                variableTypesNumeric[
+                        EditorGUILayout.Popup("Variable Type Numeric", System.Array.IndexOf(variableTypesNumeric, selectedTypeNumeric),
+                            variableTypesNumeric)];
             
-            variableName = EditorGUILayout.TextField("Variable Name", variableName);
+            variableNameNumeric = EditorGUILayout.TextField("Variable Name Numeric", variableNameNumeric);
+            
+            selectedTypeNoNumeric =
+                variableTypesNoNumeric[
+                    EditorGUILayout.Popup("Variable Type No Numeric", System.Array.IndexOf(variableTypesNoNumeric, selectedTypeNoNumeric),
+                        variableTypesNoNumeric)];
+            
+            variableNameNoNumeric = EditorGUILayout.TextField("Variable Name No Numeric", variableNameNoNumeric);
             
             selectedTemplateType = _scriptTemplateTypes[
                 EditorGUILayout.Popup("Script Template", System.Array.IndexOf(_scriptTemplateTypes, selectedTemplateType),
@@ -80,11 +90,11 @@ namespace com.ricardopino.uipackage
                 writer.WriteLine();
                 writer.WriteLine("public class " + senderClassName + " : MonoBehaviour");
                 writer.WriteLine("{");
-                writer.WriteLine("    public static Action<" + selectedType + "> OnDataNotify;");
+                writer.WriteLine("    public static Action<" + selectedTypeNumeric +","+selectedTypeNoNumeric + "> OnDataNotify;");
                 writer.WriteLine();
-                writer.WriteLine("    public void NotifyData(" + selectedType + " dataToSend)");
+                writer.WriteLine("    public void NotifyData(" + selectedTypeNumeric + " " + variableNameNumeric +", " + selectedTypeNoNumeric + " " + variableNameNoNumeric);
                 writer.WriteLine("    {");
-                writer.WriteLine("        OnDataNotify?.Invoke(dataToSend);");
+                writer.WriteLine("        OnDataNotify?.Invoke("+ variableNameNumeric +","+ variableNameNoNumeric +");");
                 writer.WriteLine("    }");
                 writer.WriteLine("}");
             }
@@ -170,7 +180,7 @@ public class {receiverClassName} : HUDElementReceiver
                 writer.WriteLine("    {");
                 writer.WriteLine("          " +className + "DataSender.OnDataNotify -= UpdateHUD;");
                 writer.WriteLine("    }");
-                writer.WriteLine("    public void UpdateHUD(" + selectedType + " data)");
+                writer.WriteLine("    public void UpdateHUD(" + selectedTypeNoNumeric + " data)");
                 writer.WriteLine("    {");
                 writer.WriteLine("        " + className + "Text.text = data.ToString();");
                 writer.WriteLine("    }");

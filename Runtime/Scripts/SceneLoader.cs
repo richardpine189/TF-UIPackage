@@ -7,7 +7,7 @@ public class SceneLoader : MonoBehaviour
     // Campo serializable para seleccionar la escena desde el Inspector
     [SerializeField] private string SceneName;
 
-    void Start()
+    void Awake()
     {
         LoadSceneAdditive();
     }
