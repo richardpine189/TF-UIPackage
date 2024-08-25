@@ -16,7 +16,7 @@ namespace com.ricardopino.uipackage
 
         private string[] variableTypes = { "int", "float", "string" };
 
-        [MenuItem("Tools/TF-UIPackageTools/Create Class Single Variable")]
+        [MenuItem("Tools/TF-UIPackageTools/Add HUD-Element Script Template/Create Class Single Variable")]
         public static void ShowWindow()
         {
             GetWindow<ClassCreatorTool>("Create Class Tool");
@@ -58,7 +58,7 @@ namespace com.ricardopino.uipackage
 
         private void CreateFolder()
         {
-            folderPath = "Assets/Scripts/" + className + "Component";
+            folderPath = "Assets/Scripts/HUDComponents/" + className + "Component";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);
@@ -191,6 +191,8 @@ public class {receiverClassName} : HUDElementReceiver
                     $"2) Integra el Prefab de HUD Element en la escena que maneja tu HUD dentro del canvas y configura su posicion.");
                 writer.WriteLine(
                     $"3) Agrega el componente {className}Receiver.cs en el formato seleccionado dentro del GameObject que representa el HUDElementReceiver y ajusta sus dependencias.");
+                writer.WriteLine(
+                    $"4) En el caso del template de Remove / Add image, ajuste la dependencia faltante con el Prefab Image dentro de subResources.");
             }
 
             Debug.Log("Clase creada en: " + filePath);

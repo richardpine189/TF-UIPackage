@@ -12,7 +12,7 @@ public class ClassCreatorToolBaseTemplate : EditorWindow
 
     private bool classExists = false;
 
-    [MenuItem("Tools/TF-UIPackageTools/Create Class Base Template")]
+    [MenuItem("Tools/TF-UIPackageTools/Add HUD-Element Script Template/Create Class Base Template")]
     public static void ShowWindow()
     {
         GetWindow<ClassCreatorToolBaseTemplate>("Create Class Tool");
@@ -70,7 +70,7 @@ public class ClassCreatorToolBaseTemplate : EditorWindow
 
     private bool CheckIfClassExists(string className)
     {
-        string folderPath = "Assets/Scripts";
+        string folderPath = "Assets/Scripts/HUDComponents/" + className + "Component";
         string filePath = Path.Combine(folderPath, className + ".cs");
 
         return File.Exists(filePath);
@@ -78,7 +78,7 @@ public class ClassCreatorToolBaseTemplate : EditorWindow
 
     private void CreateClassFile()
     {
-        string folderPath = "Assets/Scripts";
+        string folderPath = "Assets/Scripts/HUDComponents/" + className + "Component";
         string fileSenderPath = Path.Combine(folderPath, className + "DataSender.cs");
         string fileReceiverPath = Path.Combine(folderPath, className + "DataReceiver.cs");
 
