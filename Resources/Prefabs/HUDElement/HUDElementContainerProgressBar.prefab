@@ -147,6 +147,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6034552356702408112}
     m_Modifications:
+    - target: {fileID: 2166963984039868937, guid: 11b0b3e12d595ad45b5ed17dd4b3a2cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f50b86ca0229be942878d8ba6f67f078, type: 3}
     - target: {fileID: 4057302287876412207, guid: 11b0b3e12d595ad45b5ed17dd4b3a2cb, type: 3}
       propertyPath: m_Name
       value: Bar

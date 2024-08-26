@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BannerBackground
       objectReference: {fileID: 0}
+    - target: {fileID: 6372562985816630398, guid: 07700f371d4a85a41a8f23036e45356b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6e53735914a6e164793e355d6c4ba41e, type: 3}
     - target: {fileID: 7232601988637035880, guid: 07700f371d4a85a41a8f23036e45356b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

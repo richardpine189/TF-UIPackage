@@ -128,6 +128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundTimer
       objectReference: {fileID: 0}
+    - target: {fileID: 3209240164162349589, guid: 708b2d8a87162e245b2a9946d94f68f0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 392675b36ec01c14aa14fc15afb3e3b2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
