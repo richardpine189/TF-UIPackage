@@ -31,7 +31,7 @@ public class PackageInitializer
     {
         // Define la ruta a los archivos que quieres copiar
         string packagePath = "Packages/com.ricardopino.uipackage/Assets";
-        string targetPath = "Assets/Resources";
+        string targetPath = "Assets";
 
         // Copia los archivos
         FileUtil.CopyFileOrDirectory(packagePath, targetPath);
