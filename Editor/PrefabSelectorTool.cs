@@ -92,6 +92,7 @@ public class PrefabSelectorTool : EditorWindow
             SceneManager.MoveGameObjectToScene(instance, scene);
             instance.transform.position = Vector3.zero;
             instance.gameObject.transform.SetParent(GameObject.Find("Canvas").transform);
+            PrefabUtility.UnpackPrefabInstance(instance, PrefabUnpackMode.Completely, InteractionMode.UserAction);
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
 
