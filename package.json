@@ -12,6 +12,25 @@
   "dependencies": {
     "com.unity.textmeshpro": "3.0.9"
   },
+
+  "samples": [
+    {
+      "displayName": "Sample 1",
+      "description": "Contains sample for HUDScene",
+      "path": "Samples~/Sample 1"
+    },
+    {
+      "displayName": "Sample 2",
+      "description": "Contains sample for HUDScene",
+      "path": "Samples~/Sample 2"
+    },
+    {
+      "displayName": "Sample 3",
+      "description": "Contains sample for HUDScene",
+      "path": "Samples~/Sample 3"
+    }
+  ],
+
   "author": {
     "name": "Ricardo Unelen Pino",
     "email": "ricardo.pino@live.com",
