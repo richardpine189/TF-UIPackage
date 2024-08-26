@@ -52,7 +52,7 @@ public class ClassCreatorToolBaseTemplate : EditorWindow
         if (GUILayout.Button("Add Variable"))
         {
             variableNames.Add("newVariable");
-            selectedTypeIndices.Add(0); // Por defecto a 'int'
+            selectedTypeIndices.Add(0); // Por defecto lo pongo en int
         }
         
         if (GUILayout.Button("Create Class"))
@@ -165,6 +165,6 @@ public class ClassCreatorToolBaseTemplate : EditorWindow
 
         Debug.Log("Class created in: " + folderPath);
 
-        classExists = false; // Restablecer la bandera después de crear la clase con éxito
+        classExists = false; 
     }
 }
