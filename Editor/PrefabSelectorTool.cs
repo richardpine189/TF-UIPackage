@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PrefabSelectorTool : EditorWindow
 {
-    private const string prefabsFolderPath = "Assets/Resources/TF-UIPackage/Prefabs/HUDElement"; 
+    private const string prefabsFolderPath = "Assets/Resources/Prefabs/HUDElement"; 
     private const string scenesFolderPath = "Assets/Scenes";
 
     private GameObject[] prefabs;
