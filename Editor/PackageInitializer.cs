@@ -28,8 +28,8 @@ public class PackageInitializer
     private static void ImportAdditionalFiles()
     {
         
-        string packagePath = "Packages/com.ricardopino.uipackage/Assets/";
-        string targetPath = "Assets/";
+        string packagePath = "Packages/com.ricardopino.uipackage/Resources";
+        string targetPath = "Assets/Resources";
         
         FileUtil.CopyFileOrDirectory(packagePath, targetPath);
         
